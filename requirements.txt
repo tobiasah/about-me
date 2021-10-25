@@ -1,0 +1,7 @@
+mkdocs
+mkdocs-material
+mkdocs-glightbox
+mkdocstrings
+mkdocstrings-python
+mkdocs-spellcheck[codespell,symspellpy]
+mkdocs-literate-nav

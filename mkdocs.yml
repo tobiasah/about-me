@@ -1,0 +1,65 @@
+site_name: Tobias Ahrens
+docs_dir: content
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin 
+      link: https://ch.linkedin.com/in/tobias-ahrens
+    - icon: fontawesome/brands/github 
+      link: https://github.com/tobiasah
+copyright: Copyright &copy; 2020 - 2023 Tobias Ahrens
+theme:
+  name: material
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+      primary: blue grey
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: blue grey
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+      primary: blue grey
+  features:
+    - navigation.tabs
+    - navigation.footer
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - md_in_html
+
+plugins:
+  - glightbox
+  - literate-nav
+  - meta
+  - blog:
+      blog_dir: ./blog
+  - search
+  - tags
+nav:
+    - Home: index.md
+    - experience.md
+    - skills.md
+    - private.md
+    - Blog:
+      - blog/index.md
